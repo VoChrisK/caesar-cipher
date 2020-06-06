@@ -25,7 +25,7 @@ describe('CipherService', () => {
       const input1 = {
         originalString: "I love JavaScript!",
         offset: 100
-      }
+      };
 
       const res1 = cipherService.getEncryptedString(input1);
 
@@ -35,7 +35,7 @@ describe('CipherService', () => {
       const input2 = {
         originalString: "CurrySoup",
         offset: -2
-      }
+      };
       const res2 = cipherService.getEncryptedString(input2);
 
       expect(res2).toEqual(encryptedString2);
