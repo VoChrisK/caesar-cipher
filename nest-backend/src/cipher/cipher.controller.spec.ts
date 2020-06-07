@@ -29,22 +29,6 @@ describe('Cipher Controller', () => {
   });
 
   describe('encryptInput', () => {
-    it('should throw an error if the input string contains numbers or special characters', async () => {
-      const input1 = {
-        originalString: "Invalid Input 123",
-        offset: 5
-      };
-
-      expect(await cipherController.encryptInput(input1)).toThrowError;
-
-      const input2 = {
-        originalString: "Invalid Input !@#$",
-        offset: 56
-      };
-
-      expect(await cipherController.encryptInput(input2)).toThrowError;      
-    });
-
     it('should encrypt the input string and returns the encrypted string', async () => {
       const input = {
         originalString: "I love JavaScript!",
