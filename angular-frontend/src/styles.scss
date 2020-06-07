@@ -9,8 +9,11 @@ body {
 
 app-root {
     height: 100%;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 250px;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
 }

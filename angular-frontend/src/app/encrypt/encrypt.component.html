@@ -1,14 +1,15 @@
-<form [formGroup]="inputString" 
-        (ngSubmit)="onSubmit(inputString.value)" 
-        class="cipher-form">
-    <input class="cipher-input"
-            id="inputString"
-            formControlName="inputString" 
-            type="search" 
-            placeholder="Enter a string to encrypt...">
-    <button class="cipher-button">
-        <img class="logo" 
-            src="../assets/caesar-cipher-icon.png" 
-            alt="icon">
-    </button>
+<form [formGroup]="inputString" (ngSubmit)="onSubmit(inputString.value)" class="cipher-form">
+    <input class="cipher-input" id="inputString" formControlName="inputString" type="search"
+        placeholder="Enter a string to encrypt...">
+
+    <div class="cipher-container">
+        <label for="offset" class="form-label">
+            Offset:
+        </label>
+
+        <input class="cipher-input small" id="offset" formControlName="offset" value="0" type="number">
+        <button class="cipher-button">
+            <img class="logo" src="../assets/caesar-cipher-icon.png" alt="icon">
+        </button>
+    </div>
 </form>

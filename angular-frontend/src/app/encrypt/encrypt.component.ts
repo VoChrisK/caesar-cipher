@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { CipherService } from '../cipher.service';
 
 @Component({
   selector: 'app-encrypt',
@@ -12,10 +12,11 @@ export class EncryptComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private http: HttpClient
+    private cipher: CipherService
   ) { 
     this.inputString = this.formBuilder.group({
-      inputString: ''
+      inputString: '',
+      offset: 0
     });
   }
 
@@ -26,11 +27,11 @@ export class EncryptComponent implements OnInit {
   onSubmit(input) {
     const body = {
       originalString: input.inputString,
-      offset: 2
+      offset: input.offset
     };
 
-    this.http.post('http://localhost:3000/cipher/add', body, { responseType: 'text' }).subscribe(res => {
+    this.cipher.encryptString(body).subscribe(res => {
       console.log(res);
-    });
+    })
   }
 }
