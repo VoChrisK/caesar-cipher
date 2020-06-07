@@ -23,8 +23,8 @@ export class CipherService {
         }
 
         const newString = encryptedString.join("");
-        QUERIES.unshift(newString)
-        return encryptedString.join("");
+        this.addStringToQueries(inputString, newString);
+        return newString;
     }
 
     getNewCharacter(char: string, asciiCode: number, offset: number): string {
@@ -33,7 +33,10 @@ export class CipherService {
         return String.fromCharCode(code);
     }
 
-    addStringToQueries(encryptedString: string): void {
-        QUERIES.unshift(newString)
+    addStringToQueries(originalString: string, encryptedString: string): void {
+        QUERIES.unshift({
+            originalString: originalString,
+            encryptedString: encryptedString
+        });
     }
 }

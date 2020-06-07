@@ -11,8 +11,12 @@ export class CipherController {
     ) { }
 
     @Get()
-    async getQueries(): Promise<Encryption[]> { }
+    async getQueries(): Promise<Encryption[]> {
+        return QUERIES;
+    }
 
     @Post()
-    async encryptInput(@Body() input: Input): Promise<String> { }
+    async encryptInput(@Body() input: Input): Promise<String> {
+        return this.cipherService.getEncryptedString(input);
+    }
 }
