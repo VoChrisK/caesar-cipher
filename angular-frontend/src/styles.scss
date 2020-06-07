@@ -17,3 +17,19 @@ app-root {
     top: 10%;
     transform: translateX(-50%);
 }
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 80px;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 2px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.medium {
+    font-size: 56px;
+}

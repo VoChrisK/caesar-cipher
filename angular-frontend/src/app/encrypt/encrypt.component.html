@@ -1,6 +1,6 @@
 <form [formGroup]="inputString" (ngSubmit)="onSubmit(inputString.value)" class="cipher-form">
     <input class="cipher-input" id="inputString" formControlName="inputString" type="search"
-        placeholder="Enter a string to encrypt...">
+        placeholder="Enter a word to encrypt...">
 
     <div class="cipher-container">
         <label for="offset" class="form-label">
@@ -13,3 +13,8 @@
         </button>
     </div>
 </form>
+
+<h1 class="title medium column" *ngIf="encryptedString">
+    Your encrypted word is: 
+    <h2>{{ encryptedString }}</h2>
+</h1>
