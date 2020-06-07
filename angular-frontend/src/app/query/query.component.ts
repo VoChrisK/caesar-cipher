@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CipherService } from '../cipher.service';
 
 @Component({
   selector: 'app-query',
@@ -9,9 +8,7 @@ import { CipherService } from '../cipher.service';
 export class QueryComponent implements OnInit {
   @Input() query;
 
-  constructor(
-    private cipher: CipherService
-  ) { }
+  constructor() { }
 
   ngOnInit() { }
 }

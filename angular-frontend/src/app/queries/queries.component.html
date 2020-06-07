@@ -1,5 +1,11 @@
-<h1 class="title medium">Previous Queries:</h1>
+<h1 class="title column medium">Previous Queries:</h1>
 
-<app-query *ngFor="let query of queries" [query]="query">
-    
-</app-query>
+<section class="queries">
+    <div class="query">
+        <i class="word small underline">Original Word</i>
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        <i class="word small underline">Encrypted Word</i>
+    </div>
+
+    <app-query *ngFor="let query of queries" [query]="query"></app-query>
+</section>

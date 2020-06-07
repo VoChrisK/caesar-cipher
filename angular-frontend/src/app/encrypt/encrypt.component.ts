@@ -21,8 +21,7 @@ export class EncryptComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSubmit(input) {
     const body = {

@@ -30,6 +30,22 @@ app-root {
     flex-direction: column;
 }
 
+.word {
+    width: 310px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.small {
+    font-size: 24px;
+}
+
 .medium {
     font-size: 56px;
+}
+
+.underline {
+    text-decoration: underline;
 }

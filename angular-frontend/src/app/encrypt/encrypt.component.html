@@ -7,7 +7,7 @@
             Offset:
         </label>
 
-        <input class="cipher-input small" id="offset" formControlName="offset" value="0" type="number">
+        <input class="cipher-input small-input" id="offset" formControlName="offset" value="0" type="number">
         <button class="cipher-button">
             <img class="logo" src="../assets/caesar-cipher-icon.png" alt="icon">
         </button>
@@ -19,6 +19,4 @@
     <h2>{{ encryption.encryptedString }}</h2>
 </h1>
 
-<app-queries [query]="encryption">
-
-</app-queries>
+<app-queries [query]="encryption"></app-queries>
