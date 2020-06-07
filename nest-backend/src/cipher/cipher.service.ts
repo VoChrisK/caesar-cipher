@@ -28,7 +28,7 @@ export class CipherService {
     }
 
     getNewCharacter(char: string, asciiCode: number, offset: number): string {
-        let code = (char.charCodeAt(0) - asciiCode + offset) % 26;
+        let code = (Math.abs(char.charCodeAt(0) - asciiCode + offset)) % 26;
         code += asciiCode;
         return String.fromCharCode(code);
     }

@@ -1,0 +1,24 @@
+.cipher-form {
+    display: flex;
+    justify-content: space-evenly;
+    width: 700px;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.cipher-input {
+    width: 85%;
+    height: 100%;
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+    padding-left: 10px;
+}
+
+.cipher-button {
+    width: 10%;
+    height: 100%;
+}
+
+.cipher-button > .logo {
+    width: 45px;
+}
