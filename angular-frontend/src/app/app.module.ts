@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { EncryptComponent } from './encrypt/encrypt.component';
 import { RouterModule } from '@angular/router';
 import { QueryComponent } from './query/query.component';
+import { QueriesComponent } from './queries/queries.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    QueryComponent,
     EncryptComponent,
-    QueryComponent
+    QueriesComponent
   ],
   imports: [
     BrowserModule,

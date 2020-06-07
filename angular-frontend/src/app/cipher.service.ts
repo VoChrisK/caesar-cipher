@@ -12,10 +12,10 @@ export class CipherService {
   ) { }
 
   fetchQueries() {
-    return this.http.get(this.url)
+    return this.http.get<any>(`${this.url}cipher`);
   }
 
   encryptString(input) {
-    return this.http.post(`${this.url}cipher/add`, input, { responseType: 'text'})
+    return this.http.post(`${this.url}cipher/add`, input);
   }
 }

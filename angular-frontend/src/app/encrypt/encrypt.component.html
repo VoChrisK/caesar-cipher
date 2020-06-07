@@ -14,7 +14,11 @@
     </div>
 </form>
 
-<h1 class="title medium column" *ngIf="encryptedString">
+<h1 class="title medium column" *ngIf="encryption">
     Your encrypted word is: 
-    <h2>{{ encryptedString }}</h2>
+    <h2>{{ encryption.encryptedString }}</h2>
 </h1>
+
+<app-queries [query]="encryption">
+
+</app-queries>

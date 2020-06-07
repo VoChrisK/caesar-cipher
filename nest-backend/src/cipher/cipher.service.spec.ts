@@ -21,24 +21,30 @@ describe('CipherService', () => {
 
   describe('getEncryptedString', () => {
     it('should return an encrypted version of the input string', () => {
-      const encryptedString1 = 'E hkra FwrwOynelp!'
       const input1 = {
         originalString: "I love JavaScript!",
         offset: 100
       };
+      const output1 = {
+        originalString: "I love JavaScript!",
+        encryptedString: 'E hkra FwrwOynelp!'
+      };
 
       const res1 = cipherService.getEncryptedString(input1);
 
-      expect(res1).toEqual(encryptedString1);
+      expect(res1).toMatchObject(output1);
 
-      const encryptedString2 = 'AsppwQmsn';
       const input2 = {
         originalString: "CurrySoup",
         offset: -2
       };
+      const output2 = {
+        originalString: "CurrySoup",
+        encryptedString: 'AsppwQmsn'
+      };
       const res2 = cipherService.getEncryptedString(input2);
 
-      expect(res2).toEqual(encryptedString2);
+      expect(res2).toMatchObject(output2);
     });
 
     it('should save the input and encrypted string to the previous queries data file', () => {

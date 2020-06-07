@@ -39,7 +39,7 @@ describe('Cipher Controller', () => {
 
       expect(spy).toHaveBeenCalled();
       expect(spy).toHaveReturnedWith(result);
-      expect(await cipherController.encryptInput(input)).toEqual(result);
+      expect(await cipherController.encryptInput(input)).toMatchObject(result);
     });
   });
 });

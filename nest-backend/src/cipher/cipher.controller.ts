@@ -16,7 +16,7 @@ export class CipherController {
     }
 
     @Post('add')
-    async encryptInput(@Body() input: Input): Promise<String> {
+    async encryptInput(@Body() input: Input): Promise<Encryption> {
         return this.cipherService.getEncryptedString(input);
     }
 }
