@@ -1,6 +1,14 @@
-<form [formGroup]="inputString" class="cipher-form">
-    <input class="cipher-input" type="search" placeholder="Enter a string to encrypt...">
+<form [formGroup]="inputString" 
+        (ngSubmit)="onSubmit(inputString.value)" 
+        class="cipher-form">
+    <input class="cipher-input"
+            id="inputString"
+            formControlName="inputString" 
+            type="search" 
+            placeholder="Enter a string to encrypt...">
     <button class="cipher-button">
-        <img class="logo" src="../assets/caesar-cipher-icon.png" alt="icon">
+        <img class="logo" 
+            src="../assets/caesar-cipher-icon.png" 
+            alt="icon">
     </button>
 </form>
