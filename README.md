@@ -4,7 +4,7 @@ Caesar Cipher is an encryption technique where characters in a word or a phrase 
 based on the offset. This is a full-stack solution implementing this technique: users provide a word or phrase and an offset
 and get the corresponding encryption.
 
-![](https://github.com/VoChrisK/caesar-cipher/blob/master/angular-frontend/src/assets/screenshot.jpg)
+![alt screenshot](https://github.com/VoChrisK/caesar-cipher/blob/master/angular-frontend/src/assets/screenshot.jpg)
 
 ## Technologies Used
 * Angular 8
@@ -25,15 +25,11 @@ and get the corresponding encryption.
 ### 4. Install or update Node.js to version 12.14.0 or later
 `nvm install` or `nvm install 12.14.0`
 
-### 5. Install dependencies on the Backend and start the development server
-`cd caesar-cipher/nest-backend`
-`npm install`
-`nest start`
+### 5. Install dependencies
+`npm run install-dependencies`
 
-### 6. Install dependencies on the Frontend and start the app
-`cd ../angular-frontend`
-`npm install`
-`ng serve`
+### 6. Start the app!
+`npm run dev`
 
 ## Features
 
