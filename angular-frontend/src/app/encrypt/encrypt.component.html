@@ -1,6 +1,10 @@
+<h1 *ngIf="error" class="error title small column">
+    Please enter a word to be encrypted!
+</h1>
+
 <form [formGroup]="inputString" (ngSubmit)="onSubmit(inputString.value)" class="cipher-form">
     <input class="cipher-input" id="inputString" formControlName="inputString" type="search"
-        placeholder="Enter a word to encrypt...">
+        placeholder="Enter a word to be encrypted...">
 
     <div class="cipher-container">
         <label for="offset" class="form-label">
@@ -9,14 +13,14 @@
 
         <input class="cipher-input small-input" id="offset" formControlName="offset" value="0" type="number">
         <button class="cipher-button">
-            <img class="logo" src="../assets/caesar-cipher-icon.png" alt="icon">
+            <img class="logo" src="../assets/caesar-cipher-icon-alt.png" alt="icon">
         </button>
     </div>
 </form>
 
 <h1 class="title medium column" *ngIf="encryption">
-    Your encrypted word is: 
-    <h2>{{ encryption.encryptedString }}</h2>
+    Your encrypted word is:
+    <h2 class="encrypted">{{ encryption.encryptedString }}</h2>
 </h1>
 
 <app-queries [query]="encryption"></app-queries>

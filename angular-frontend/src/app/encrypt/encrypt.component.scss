@@ -5,15 +5,22 @@
     align-items: center;
     width: 700px;
     height: 150px;
-    margin-top: 30px;
 }
 
 .cipher-input {
     width: 100%;
     height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
     font-size: 26px;
     font-family: 'Lato', sans-serif;
     padding-left: 10px;
+}
+
+.cipher-input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 1.5pt #e0ffff;
 }
 
 .small-input {
@@ -36,9 +43,9 @@
 }
 
 .cipher-button {
-    cursor: pointer;
     width: 30%;
     height: 50px;
+    cursor: pointer;
 }
 
 .cipher-button > .logo {

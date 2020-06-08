@@ -10,6 +10,7 @@ import { CipherService } from '../cipher.service';
 export class EncryptComponent implements OnInit {
   inputString;
   encryption;
+  error: boolean;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -19,6 +20,7 @@ export class EncryptComponent implements OnInit {
       inputString: '',
       offset: 0
     });
+    this.error = false;
   }
 
   ngOnInit() {}
@@ -29,8 +31,13 @@ export class EncryptComponent implements OnInit {
       offset: input.offset
     };
 
-    this.cipher.encryptString(body).subscribe(res => {
-      this.encryption = res;
-    })
+    if(input.inputString) {
+      this.error = false;
+      this.cipher.encryptString(body).subscribe(res => {
+        this.encryption = res;
+      });
+    } else {
+      this.error = true;
+    }
   }
 }
