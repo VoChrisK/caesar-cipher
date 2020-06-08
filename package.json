@@ -4,6 +4,9 @@
   "description": "Caesar Cipher is an encryption algorithm where characters in a word or a phrase are shifted up or down in the alphabet  based on the offset. This is a full-stack solution for this algorithm, where users can provide a word or phrase and an offset and get the corresponding encryption.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "install-frontend": "cd angular-frontend && npm install",
+    "install-backend": "cd nest-backend && npm install",
+    "install-dependencies": "npm run install-frontend && npm run install-backend",
     "frontend": "cd angular-frontend && ng serve",
     "backend": "cd nest-backend && nest start",
     "dev": "npm run backend & npm run frontend"
