@@ -6,6 +6,8 @@ and get the corresponding encryption.
 
 ![alt screenshot](https://github.com/VoChrisK/caesar-cipher/blob/master/angular-frontend/src/assets/screenshot.jpg)
 
+[Video Walkthrough](https://www.youtube.com/watch?v=_3ElDJ800rE)
+
 ## Technologies Used
 * Angular 8
 * Node.js 12.14.0
