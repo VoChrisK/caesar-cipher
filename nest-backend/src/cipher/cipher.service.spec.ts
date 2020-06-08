@@ -36,11 +36,11 @@ describe('CipherService', () => {
 
       const input2 = {
         originalString: "CurrySoup",
-        offset: -2
+        offset: -3
       };
       const output2 = {
         originalString: "CurrySoup",
-        encryptedString: 'AsppwQmsn'
+        encryptedString: 'ZroovPlrm'
       };
       const res2 = cipherService.getEncryptedString(input2);
 
