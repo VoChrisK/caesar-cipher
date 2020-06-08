@@ -1,5 +1,5 @@
 <h1 *ngIf="error" class="error title small column">
-    Please enter a word to be encrypted!
+    Please enter a word/phrase to be encrypted!
 </h1>
 
 <form [formGroup]="inputString" (ngSubmit)="onSubmit(inputString.value)" class="cipher-form">
