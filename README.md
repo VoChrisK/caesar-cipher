@@ -75,3 +75,7 @@ Here is a code snippet demonstrating my implementation of Caesar Cipher:
         return String.fromCharCode(code);
     }
 ```
+
+## Fun Fact
+
+I used the same project I built as a take home assignment for my presentations to the new developers during my time at Fidelity Investments. I used it to demonstrate writing end-to-end tests using Cypress. I made my presentations interactive by allowing the new developers to participate by making it a huge pair programming sessions. I still remember my old manager Jason saying that a majority of the new devs gave good feedback on my presentations. Good times... (2021)
